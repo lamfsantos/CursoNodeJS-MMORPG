@@ -5,3 +5,9 @@ module.exports.jogo = function(application, request, response) {
 		response.redirect('/')
 	}
 }
+
+module.exports.sair = function(application, request, response) {
+	request.session.destroy(function(error){
+		response.render("index", {validacao: {}})
+	})
+}
