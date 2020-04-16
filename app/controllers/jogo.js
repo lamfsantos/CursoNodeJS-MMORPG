@@ -1,3 +1,7 @@
 module.exports.jogo = function(application, request, response) {
-	response.render('jogo')
+	if (request.session.autorizado) {
+		response.render('jogo')
+	}else{
+		response.redirect('/')
+	}
 }
