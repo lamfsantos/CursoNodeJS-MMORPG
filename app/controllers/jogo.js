@@ -1,6 +1,6 @@
 module.exports.jogo = function(application, request, response) {
 	if (request.session.autorizado) {
-		response.render('jogo')
+		response.render('jogo', {img_casa: request.session.casa})
 	}else{
 		response.redirect('/')
 	}
