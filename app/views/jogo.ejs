@@ -21,6 +21,7 @@
 				})
 
 				$('#btnSuditos').click(function(){
+					$('#msgErros').hide()
 					$.ajax({
 						url: '/suditos',
 						method: 'get',
@@ -31,6 +32,7 @@
 				})
 
 				$('#btnPergaminho').click(function(){
+					$('#msgErros').hide()
 					$.ajax({
 						url: '/pergaminhos',
 						method: 'get',
@@ -57,6 +59,12 @@
 		</nav>
 
 	    <div class="container">
+
+	    	<% if(comando_invalido == 'S'){ %>
+	    		<div class="alert alert-danger" id="msgErros">
+	    			<strong>Operação inválida, verifique se todos os campos foram informados</strong>
+	    		</div>
+	    	<% } %>
 	    	
 			<div class="row">
 	    		<div class="col-sm-3 casa">

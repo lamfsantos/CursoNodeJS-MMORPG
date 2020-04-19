@@ -11,4 +11,7 @@ module.exports = function(application){
 	application.get('/pergaminhos', function(request, response){
 		application.app.controllers.jogo.pergaminhos(application, request, response)
 	});
+	application.post('/ordenar_acao_sudito', function(request, response){
+		application.app.controllers.jogo.ordenar_acao_sudito(application, request, response)
+	});
 }
