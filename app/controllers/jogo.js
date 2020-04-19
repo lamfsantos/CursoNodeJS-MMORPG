@@ -19,3 +19,11 @@ module.exports.sair = function(application, request, response) {
 		response.render("index", {validacao: {}})
 	})
 }
+
+module.exports.suditos = function(application, request, response) {
+	response.render("aldeoes", {validacao: {}})
+}
+
+module.exports.pergaminhos = function(application, request, response) {
+	response.render("pergaminhos", {validacao: {}})
+}

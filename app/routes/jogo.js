@@ -5,4 +5,10 @@ module.exports = function(application){
 	application.get('/sair', function(request, response){
 		application.app.controllers.jogo.sair(application, request, response)
 	});
+	application.get('/suditos', function(request, response){
+		application.app.controllers.jogo.suditos(application, request, response)
+	});
+	application.get('/pergaminhos', function(request, response){
+		application.app.controllers.jogo.pergaminhos(application, request, response)
+	});
 }

@@ -5,6 +5,7 @@
 .body-jogo{
 	background-image: url('../images/mapa.gif');
 	background-position: center;
+	background-attachment: fixed;
 }
 
 .form-entrar {
