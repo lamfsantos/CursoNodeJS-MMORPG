@@ -39,6 +39,14 @@ module.exports.pergaminhos = function(application, request, response) {
 		response.redirect('/')
 		return
 	}
+
+	var connection = application.config.dbConnection
+	var JogoDAO = new application.app.models.JogoDAO(connection)
+
+	var usuario = request.session.usuario
+
+	JogoDAO.getAcoes(usuario)
+
 	response.render("pergaminhos", {validacao: {}})
 }
 
