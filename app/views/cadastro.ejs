@@ -20,11 +20,11 @@
 
 		<nav class="navbar navbar-default navbar-static-top">
 			<div class="container">
-				<form class="form-inline form-entrar">
+				<div class="form-inline form-entrar" action="/">
 					<div class="form-group">				
-						<button type="button" class="btn btn-success">Voltar</button>
+						<a href="/" class="btn btn-success">Voltar</a>
 					</div>
-				</form>
+				</div>
 			</div>
 			
 		</nav>
@@ -39,6 +39,11 @@
 	    					<% } %>
 	    				</ul>
 	    			</div>
+	    	<% } %>
+	    	<% if(cadastroEfetuado == 'sim') {%>
+	    		<div class="alert alert-info" id="msg">
+	    			<strong>Cadastro realizado com sucesso!</strong>
+	    		</div>
 	    	<% } %>
 			<form class="form-cadastro" action="/cadastrar" method="post">
 			

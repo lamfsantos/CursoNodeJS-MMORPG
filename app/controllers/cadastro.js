@@ -1,5 +1,5 @@
 module.exports.cadastro = function(application, request, response) {
-	response.render('cadastro', {validacao: {}, dadosForm: {}})
+	response.render('cadastro', {validacao: {}, dadosForm: {}, cadastroEfetuado: {}})
 }
 
 module.exports.cadastrar = function(application, request, response) {
@@ -25,5 +25,5 @@ module.exports.cadastrar = function(application, request, response) {
 	JogoDAO.gerarParametros(dadosForm.usuario)
 	//geração dos parâmetros
 
-	response.send("Podemos cadastrar")
+	response.render('cadastro', {validacao: {}, dadosForm: {}, cadastroEfetuado: 'sim'})
 }
